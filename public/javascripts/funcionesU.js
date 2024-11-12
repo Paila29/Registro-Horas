@@ -43,8 +43,9 @@ function cantRegs(callback) {
       //se movió el callback (el retorno) para que no se itere el swal
       callback(registros);
     }
+    
   });
-  xhr.open('GET', 'http://localhost:3000/students');//ruta de conexion
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/students');//ruta de conexion
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -110,7 +111,7 @@ function postData(date, eTime, dTime, hoursReal, description) {
           description: description
         };
 
-        xhr.open('POST', 'http://localhost:3000/students');
+        xhr.open('POST', 'https://registro-horas-production.up.railway.app/students');
         xhr.setRequestHeader('Content-Type', 'application/json');
         let json = JSON.stringify(obj);
         xhr.send(json);
@@ -136,7 +137,7 @@ function consultarHoras(carnet) {
       actualizarHorasReal(carnet);
     }
   });
-  xhr.open('GET', 'http://localhost:3000/user/' + carnet);//acceso al user en cuestion con la concatenacion del id
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user/' + carnet);//acceso al user en cuestion con la concatenacion del id
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -156,8 +157,8 @@ function actualizarHorasReal(carnet) {
       //llamado a metodos ejecutables
     }
   });
-  //consulta PATCH por medio de la ruta "http://localhost:3000/api" para setear los nuevos valores (stock)
-  xhr.open('PATCH', 'http://localhost:3000/user/' + carnet);
+  //consulta PATCH por medio de la ruta "https://registro-horas-production.up.railway.app/api" para setear los nuevos valores (stock)
+  xhr.open('PATCH', 'https://registro-horas-production.up.railway.app/user/' + carnet);
   xhr.setRequestHeader('Content-Type', 'application/json');
   let json = `{"_id":"${carnet}","hoursReal":"${nueva}"}`
   xhr.send(json);
@@ -183,7 +184,7 @@ function seguimientoHoras() {
       console.log(`Error al realizar la solicitud: ${xhr.statusText}`);
     }
   });
-  xhr.open('GET', 'http://localhost:3000/user/' + id);
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user/' + id);
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -256,7 +257,7 @@ function postUsuario(id, name, secondName, assignedHours, passw) {
       password: passw
     };
 
-    xhr.open('POST', 'http://localhost:3000/user');
+    xhr.open('POST', 'https://registro-horas-production.up.railway.app/user');
     xhr.setRequestHeader('Content-Type', 'application/json');
     let json = JSON.stringify(obj);
     xhr.send(json);
@@ -280,7 +281,7 @@ function datosUsuario() {
       mostrarError("Error al realizar la solicitud");
     }
   });
-  xhr.open('GET', 'http://localhost:3000/user/' + carnet);
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user/' + carnet);
   xhr.responseType = 'json';
   xhr.send();
 
@@ -313,7 +314,7 @@ function compUsuario(carnet, pass) {
       mostrarError("Error al realizar la solicitud");
     }
   });
-  xhr.open('GET', 'http://localhost:3000/user/' + carnet);
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user/' + carnet);
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -350,7 +351,7 @@ function extraerids(id) {
       mostrarError("Error al realizar la solicitud");
     }
   });
-  xhr.open('GET', 'http://localhost:3000/students');
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/students');
   xhr.responseType = 'json';
   xhr.send();
 
@@ -363,8 +364,8 @@ function limpiarRegsUsuario(id) {
 
     }
   });
-  //consulta DELETE por medio de la ruta "http://localhost:3000/api" y concatenando el 'id' para setear los nuevos valores (stock)
-  xhr.open('DELETE', 'http://localhost:3000/students/' + id);
+  //consulta DELETE por medio de la ruta "https://registro-horas-production.up.railway.app/api" y concatenando el 'id' para setear los nuevos valores (stock)
+  xhr.open('DELETE', 'https://registro-horas-production.up.railway.app/students/' + id);
   xhr.send();
 }
 
@@ -389,8 +390,8 @@ function deleteU(id) {
             mostrarUsuarios();
           }
         });
-        //consulta DELETE por medio de la ruta "http://localhost:3000/api" y concatenando el 'id' para setear los nuevos valores (stock)
-        xhr.open('DELETE', 'http://localhost:3000/user/' + id);
+        //consulta DELETE por medio de la ruta "https://registro-horas-production.up.railway.app/api" y concatenando el 'id' para setear los nuevos valores (stock)
+        xhr.open('DELETE', 'https://registro-horas-production.up.railway.app/user/' + id);
         xhr.send();
       }
     });
@@ -425,9 +426,9 @@ function editU(id, nombre, apellido, password, horasAsignadas) {
             mostrarUsuarios();
           }
         });
-        //consulta DELETE por medio de la ruta "http://localhost:3000/api" y concatenando el 'id' para setear los nuevos valores (stock)
+        //consulta DELETE por medio de la ruta "https://registro-horas-production.up.railway.app/api" y concatenando el 'id' para setear los nuevos valores (stock)
 
-        xhr.open('PUT', 'http://localhost:3000/user/' + id);
+        xhr.open('PUT', 'https://registro-horas-production.up.railway.app/user/' + id);
         xhr.setRequestHeader('Content-Type', 'application/json');
         let json = `{"_id":"${id}","name":"${document.getElementById('name' + id).value}","secondName":"${document.getElementById('sname' + id).value}","assignedHours":"${document.getElementById('horasA' + id).value}","password":"${document.getElementById('password' + id).value}"}`
         xhr.send(json);
@@ -470,8 +471,8 @@ function deleteRH(id, carnet, cantidad) {
             // La solicitud DELETE se realizó correctamente
           }
         });
-        // consulta DELETE por medio de la ruta "http://localhost:3000/api" y concatenando el 'id' para setear los nuevos valores (stock)
-        xhr.open('DELETE', 'http://localhost:3000/students/' + id);
+        // consulta DELETE por medio de la ruta "https://registro-horas-production.up.railway.app/api" y concatenando el 'id' para setear los nuevos valores (stock)
+        xhr.open('DELETE', 'https://registro-horas-production.up.railway.app/students/' + id);
         xhr.send();
       }
     });
@@ -509,7 +510,7 @@ function getHorasRTotales(id, callback) {
       console.log(`Error al realizar la solicitud: ${xhr.statusText}`);
     }
   });
-  xhr.open('GET', 'http://localhost:3000/user/' + id);
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user/' + id);
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -524,7 +525,7 @@ function resteoHoras(carnet, cantidad, horasConsulta, callback) {
       callback();
     }
   });
-  xhr.open('PATCH', 'http://localhost:3000/user/' + carnet);
+  xhr.open('PATCH', 'https://registro-horas-production.up.railway.app/user/' + carnet);
   xhr.setRequestHeader('Content-Type', 'application/json');
   const json = `{"_id":"${carnet}","hoursReal":"${total}"}`;
   xhr.send(json);
@@ -580,7 +581,7 @@ function mostrarUsuarios() {
     }
   });
 
-  xhr.open('GET', 'http://localhost:3000/user');
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/user');
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -643,7 +644,7 @@ function get() {
     }
   });
 
-  xhr.open('GET', 'http://localhost:3000/students');
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/students');
   xhr.responseType = 'json';
   xhr.send();
 }
@@ -701,7 +702,7 @@ function getAll() {
     }
   });
 
-  xhr.open('GET', 'http://localhost:3000/students');
+  xhr.open('GET', 'https://registro-horas-production.up.railway.app/students');
   xhr.responseType = 'json';
   xhr.send();
 }
