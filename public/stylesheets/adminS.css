@@ -1,0 +1,129 @@
+body{
+background-color: rgb(28, 84, 84);  
+}
+
+#btnLO {
+    margin-right: 1%;
+}
+
+#response{
+    padding-top: 2%;
+}
+
+#funcionesUser {
+    margin-top: 5%;
+    display: flex; /* Agregado */
+  
+}
+
+.edit {
+  border-radius: 10px; /* Ajusta este valor según tus preferencias */
+
+  padding: 10px 20px; /* Ajusta el espaciado según tus preferencias */
+  margin: 5px; /* Ajusta el margen según tus preferencias */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#user {
+    display: flex;
+  margin-right: 1%;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    background-color: rgb(196, 196, 196);
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.30rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    height: auto;
+  
+    margin-top: 0.5%;
+  }
+  
+
+#gestionUsers {
+    margin-left: 11%;
+    width: 60%;
+    border-radius: 5px;
+    background-color: rgba(60, 85, 105, 0.584);
+}
+#imprimir{
+    display: flex;
+    margin-right: 1%;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      background-color: rgb(208, 36, 36);
+      padding: 0.4rem;
+      border: none;
+      border-radius: 0.30rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      height: auto;
+      color: rgb(255, 255, 255);
+      margin-top: 0.5%;
+  }
+
+  #expExcel{
+    display: flex;
+    margin-right: 1%;
+    margin-left: 8%;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      background-color: rgb(52, 201, 47);
+      padding: 0.4rem;
+      border: none;
+      border-radius: 0.30rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      height: auto;
+      margin-top: 0.5%;
+      color: rgb(29, 29, 29);
+  }
+  #cont{
+    margin-right: 40%;
+    align-items: center;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+  }
+#btns{
+  float: right;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+#carnet{
+    width: 60%;
+}
+
+#actions{
+ 
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+#btnsU{
+    float: right;
+      margin-right: 1%;
+      margin-bottom: 1%;
+  }
+
+#campos {
+    border-radius: 5px;
+    margin-left: 5%;
+    background-color: rgb(96, 149, 132);
+    width:20%; /* Modificado */ 
+    
+}
+
+.cam {
+    margin-left: 25px;
+    border: 25px;
+    width: 80%;
+
+}
+
+.h {
+    margin-left: 25px;
+    width: 30%;
+}

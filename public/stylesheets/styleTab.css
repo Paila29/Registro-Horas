@@ -1,0 +1,95 @@
+body{
+background-color: rgb(173, 15, 113);
+
+}
+
+#user {
+    display: flex;
+  margin-right: 1%;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    background-color: rgb(196, 196, 196);
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.30rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    height: auto;
+  
+    margin-top: 0.5%;
+  }
+
+  #seguimiento{
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.30rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    height: auto;
+  margin-right: 42%;
+  }
+
+  #capsula{
+margin-right: 40%;
+    align-items: center;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  #response {
+    margin-top: 5%;
+      height: auto;
+      align-items: center;
+      margin-left: 9%;
+      width: fit-content;
+      background-color: rgb(255, 255, 255);
+      padding: 0.8rem;
+      border: none;
+      border-radius: 0.30rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      margin-bottom: 7.6%;
+    }
+
+    #imprimir{
+      display: flex;
+      margin-right: 1%;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        background-color: rgb(208, 36, 36);
+        padding: 0.4rem;
+        border: none;
+        border-radius: 0.30rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        height: auto;
+        color: rgb(255, 255, 255);
+        margin-top: 0.5%;
+    }
+
+    #expExcel{
+      display: flex;
+      margin-right: 1%;
+      margin-left: 8%;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        background-color: rgb(52, 201, 47);
+        padding: 0.4rem;
+        border: none;
+        border-radius: 0.30rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        height: auto;
+        margin-top: 0.5%;
+        color: rgb(29, 29, 29);
+    }
+    #cont{
+      margin-right: 40%;
+      align-items: center;
+      width: fit-content;
+      display: flex;
+      justify-content: space-between;
+    }

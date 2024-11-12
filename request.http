@@ -1,0 +1,46 @@
+###
+GET  http://127.0.0.1:3000/students HTTP/1.1
+
+###
+GET  http://mongodb+srv://Pai829:u675qOrkzqd9Y48J@horariohorasea.bufeupr.mongodb.net/?retryWrites=true&w=majority/user HTTP/1.1
+
+
+//Agrega un campo en la tabla 
+###
+POST http://127.0.0.1:3000/students HTTP/1.1
+Content-Type: application/json
+
+{"_id":1,
+"carnet": "MARY",
+"date":"12/12/2012",
+"eTime":"12:00",
+"dTime":"12:00",
+"cantHor": 0, 
+"description": "NO ELIMINAR"}
+
+//Agrega un campo en la tabla 
+###
+POST https://horasucr-yxkk-dev.fl0.io/students HTTP/1.1
+Content-Type: application/json
+
+{"_id":9,
+"carnet": "C18776",
+"name": "Esteban",
+"date":"25/09/2023",
+"eTime":"20:00",
+"dTime":"21:00",
+"cantHor": 0, 
+"description": "NO ELIMINAR"}
+
+
+###
+PATCH  http://127.0.0.1:3000/user/C66666 HTTP/1.1
+Content-Type: application/json
+
+{"hoursReal" : 6}
+
+
+###
+DELETE https://horasucr-yxkk-dev.fl0.io/user/ID HTTP/1.1
+Content-Type: application/json
+

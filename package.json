@@ -1,0 +1,27 @@
+{
+  "name": "phoras",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "datatables.net-dt": "^1.13.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.31",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
+    "morgan": "~1.9.1",
+    "sweetalert2": "^11.7.10"
+  },
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
